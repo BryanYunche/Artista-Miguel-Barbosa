@@ -1,0 +1,15 @@
+.poema {
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo branco translúcido */
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border-left: 5px solid #091c0c; /* Detalhe verde na lateral */
+    font-style: italic;
+}
+
+.poema pre {
+    font-family: 'Georgia', serif; /* Fonte que remete a escrita clássica */
+    white-space: pre-wrap;        /* Garante que o texto quebre linha se for muito longo no celular */
+    font-size: 1.1rem;
+    color: #222;
+}

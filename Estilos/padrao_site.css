@@ -1,0 +1,125 @@
+/* Estilos Globais */
+
+@font-face {
+    font-family: 'Amazonica'; /* Nome que você vai usar no código */
+    src: url('../Estilos/fonte-amazonica/AmazBd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amazonica-text'; /* Nome que você vai usar no código */
+    src: url('../Estilos/fonte-amazonica/AmazStd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Garante que nada saia da tela */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%; /* A imagem nunca será maior que o pai dela */
+    height: auto;    /* Mantém a proporção para não achatar */
+    display: block;  /* Remove espaços vazios estranhos abaixo da imagem */
+}
+
+body {
+    /* 1. Uma cor de segurança caso a imagem falhe */
+    background-color: rgba(255, 255, 255, 0.8); /* Branco com 80% de transparência */
+
+    /* 2. O caminho para a sua nova imagem */
+    /* Usamos ../ para sair da pasta Estilos e entrar na midia-site */
+    background-image: url('../midia-site/textura-site.webp');
+
+    /* 3. Faz a textura se repetir como um papel de parede */
+    background-repeat: repeat;
+
+    /* 4. Fixa o fundo para o conteúdo deslizar por cima (efeito profissional) */
+    background-attachment: fixed;
+
+    /* 5. Ajuste de escala: Se a imagem for muito grande, diminua esse valor */
+    background-size: 400px; 
+    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    max-width: 800px; /* Define a largura do seu "feed" */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8); /* Branco com 80% de transparência */
+    /* Isso ajuda a destacar o conteúdo da textura de fundo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#titulo-site{
+    font-family: 'Amazonica', sans-serif;
+}
+
+
+h1, h2,  .btn-menu {
+    font-family: 'Amazonica', sans-serif;
+    letter-spacing: 1px;
+}
+
+p {
+    font-family: 'Amazonica-text', sans-serif;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #f1c40f; /* Amarelo ouro dos barcos */
+    /* Efeito de contorno para destacar no fundo de textura */
+    text-shadow: 2px 2px 0px #091c0c; 
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 300%;
+}
+
+h2 {
+    background-color: #091c0c; /* O verde escuro que você escolheu para os links */
+    color: #ffffff;            /* Texto branco para dar contraste na faixa */
+    
+    /* Faz a faixa ocupar a largura toda */
+    width: 100%;
+    
+    /* Espaçamento interno: 15px em cima/baixo, 0 nos lados */
+    padding: 4px 0;
+    
+    /* Remove margens padrão que podem criar espaços brancos laterais */
+    margin-top: 40px;
+    margin-bottom: 30px;
+    
+    /* Alinhamento do texto na faixa */
+    text-align: center;
+    
+    /* Um detalhe profissional: letras em maiúsculo e espaçadas */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #034529;
+    text-decoration: none; /* Remove o sublinhado dos links para ficar mais moderno */
+    margin: 0 10px; /* Aqui eu coloque uma margem entre os links */
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+
+}

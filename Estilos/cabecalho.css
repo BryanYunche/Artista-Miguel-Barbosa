@@ -1,0 +1,52 @@
+/* 1. Estilização do Cabeçalho */
+.cabecalho-principal {
+    width: 100%;
+    padding: 5px 1px;
+    text-align: center;
+    /* Faz o menu acompanhar a rolagem da página */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* Fundo levemente translúcido para combinar com a textura */
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.cabecalho-principal h1 {
+    margin-bottom: 25px;
+    color: #091c0c;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 2. O Container do Menu */
+.menu-navegacao {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Faz os botões pularem linha no celular */
+    gap: 5px;      /* Espaço entre os botões */
+}
+
+/* 3. Estilo dos Botões */
+.btn-menu {
+    text-decoration: none;
+    color: #091c0c;
+    background-color: transparent;
+    border: 2px solid #091c0c;
+    padding: 5px 10px;
+    border-radius: 30px; /* Bordas bem arredondadas */
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease; /* Suaviza a troca de cor */
+}
+
+/* 4. Efeito de Hover (Ao passar o mouse) */
+.btn-menu:hover {
+    background-color: #091c0c;
+    color: #ffffff;
+    transform: translateY(-3px); /* Pequeno pulo para cima */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+

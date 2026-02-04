@@ -1,0 +1,27 @@
+#Biografia {
+    text-align: center;
+    padding: 20px;
+}
+
+#Biografia h2 {
+    text-align: center;    /* O título continua no centro para dar equilíbrio */
+    margin-bottom: 30px;
+    font-family: 'Amazonica', sans-serif;
+    font-size: 200%;
+}
+
+#Biografia p{
+    text-align: justify;
+    padding: auto;
+    margin: 2%;
+    hyphens: auto; /* Adiciona hífens se as palavras forem muito grandes (melhora o justificado) */
+    line-height: 1.8; /* Aumenta um pouco o espaçamento entre linhas para leveza */
+}
+
+#Imagem_papai {
+    display: block;
+    margin: 20px auto;
+    width: 30%;
+    border-radius: 40%; /* Deixa a foto circular, muito comum em biografias */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

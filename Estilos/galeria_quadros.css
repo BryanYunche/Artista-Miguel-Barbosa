@@ -1,0 +1,62 @@
+/* 1. O Container agora limita o que aparece */
+.carrossel-container, .carrossel-container-frabricacao {
+    position: relative; /* Base para os botões se localizarem */
+    width: 100%;
+    max-width: 600px;   /* Largura de uma imagem (ajuste conforme o gosto) */
+    margin: 0 auto;     /* Centraliza o carrossel no feed */
+}
+
+/* 2. A lista mostra uma imagem por vez */
+.galeria-quadros-moldura-miriti, .galeria-processo-frabricacao {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden; /* Esconde as outras imagens */
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.galeria-quadros-moldura-miriti li, .galeria-processo-frabricacao li {
+    flex: 0 0 100%;     /* Cada item ocupa 100% da largura do container */
+    text-align: center;
+}
+
+.galeria-quadros-moldura-miriti img, .galeria-processo-frabricacao img {
+    width: 100%;
+    height: 400px;      /* Altura fixa para manter o padrão */
+    object-fit: contain;
+}
+
+/* 3. Botões nas laterais */
+.btn-controle, .btn-controle-fabri {
+    position: absolute;
+    top: 50%;           /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    z-index: 10;        /* Fica acima da imagem */
+    background: rgba(9, 28, 12, 0.9); /* Verde escuro transparente */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#btn-prev { left: 10px; }  /* Cola na esquerda */
+#btn-next { right: 10px; } /* Cola na direita */
+
+#btn-prev-fabri { left: 10px; }  /* Cola na esquerda */
+#btn-next-fabri { right: 10px; } /* Cola na direita */
+
+/* 4. Efeito de esmaecer (indução visual) */
+.fade-esquerda, .fade-direita, .fade-esquerda-fabri, .fade-direita-fabri {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    pointer-events: none; /* Deixa o clique passar para o botão */
+}
+
+#Pinturas-Molduras-Miriti h3{
+        font-family: 'Amazonica', sans-serif;
+}
