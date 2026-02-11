@@ -28,11 +28,7 @@ img {
 
 body {
     /* 1. Uma cor de segurança caso a imagem falhe */
-    background-color: rgba(255, 255, 255, 0.8); /* Branco com 80% de transparência */
-
-    /* 2. O caminho para a sua nova imagem */
-    /* Usamos ../ para sair da pasta Estilos e entrar na midia-site */
-    background-image: url('../midia-site/textura-site.webp');
+    background: rgba(255, 255, 255, 0.9);
 
     /* 3. Faz a textura se repetir como um papel de parede */
     background-repeat: repeat;
@@ -50,13 +46,11 @@ body {
 }
 
 section {
-    width: 100%;
-    max-width: 800px; /* Define a largura do seu "feed" */
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.8); /* Branco com 80% de transparência */
-    /* Isso ajuda a destacar o conteúdo da textura de fundo */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 95%; /* Garante margens laterais automáticas no celular */
+    max-width: 900px;
+    margin: 20px auto; /* Centraliza a seção */
+    border-radius: 12px; /* Bordas suaves trazem modernidade */
+    padding: 30px;
 }
 
 #titulo-site{
@@ -122,4 +116,21 @@ nav {
     text-align: center;
     margin-bottom: 20px;
 
+}
+
+footer{
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #titulo-site {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    .cabecalho-principal h1 {
+        font-size: 1.5rem;
+    }
 }

@@ -21,25 +21,21 @@
     letter-spacing: 2px;
 }
 
-/* 2. O Container do Menu */
 .menu-navegacao {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Faz os botões pularem linha no celular */
-    gap: 5px;      /* Espaço entre os botões */
+    gap: 15px; /* Mais espaço entre botões */
+    padding: 10px 0;
+    
 }
 
-/* 3. Estilo dos Botões */
 .btn-menu {
-    text-decoration: none;
-    color: #091c0c;
-    background-color: transparent;
-    border: 2px solid #091c0c;
-    padding: 5px 10px;
-    border-radius: 30px; /* Bordas bem arredondadas */
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: all 0.3s ease; /* Suaviza a troca de cor */
+    border: 1.5px solid #091c0c;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+
 }
 
 /* 4. Efeito de Hover (Ao passar o mouse) */

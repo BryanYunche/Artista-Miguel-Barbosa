@@ -21,7 +21,9 @@
 #Imagem_papai {
     display: block;
     margin: 20px auto;
-    width: 30%;
-    border-radius: 40%; /* Deixa a foto circular, muito comum em biografias */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 250px; /* Tamanho fixo ideal para desktop */
+    max-width: 80% ; /* No mobile, ela cresce até 80% da tela se necessário */
+    height: auto;
+    border-radius: 50%; /* Círculo perfeito */
+    border: 4px solid #091c0c; /* Moldura para destacar do fundo */
 }

@@ -6,20 +6,22 @@
     margin: 0 auto;     /* Centraliza o carrossel no feed */
 }
 
-/* 2. A lista mostra uma imagem por vez */
+
 .galeria-quadros-moldura-miriti, .galeria-processo-frabricacao {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden; /* Esconde as outras imagens */
-    scroll-behavior: smooth;
+list-style: none; /* Remove os pontinhos */
     padding: 0;
     margin: 0;
-    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .galeria-quadros-moldura-miriti li, .galeria-processo-frabricacao li {
-    flex: 0 0 100%;     /* Cada item ocupa 100% da largura do container */
+flex: 0 0 100%;
     text-align: center;
+    box-sizing: border-box;
+    padding: 10px; /* Espaço para a legenda não colar nas bordas */
 }
 
 .galeria-quadros-moldura-miriti img, .galeria-processo-frabricacao img {
@@ -48,15 +50,41 @@
 #btn-prev-fabri { left: 10px; }  /* Cola na esquerda */
 #btn-next-fabri { right: 10px; } /* Cola na direita */
 
-/* 4. Efeito de esmaecer (indução visual) */
-.fade-esquerda, .fade-direita, .fade-esquerda-fabri, .fade-direita-fabri {
+/* Adicione ou substitua no galeria_quadros.css */
+
+.fade-esquerda, .fade-esquerda-fabri {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.9), transparent);
+}
+
+.fade-direita, .fade-direita-fabri {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0.9), transparent);
+}
+
+/* Ajuste das dimensões das camadas de fade */
+.fade-esquerda, .fade-direita, 
+.fade-esquerda-fabri, .fade-direita-fabri {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 40px;
-    pointer-events: none; /* Deixa o clique passar para o botão */
+    width: 50px; /* Largura do efeito de fumaça nas bordas */
+    z-index: 5;  /* Acima da imagem, abaixo dos botões */
+    pointer-events: none; /* Importante: permite clicar no que está atrás */
 }
 
 #Pinturas-Molduras-Miriti h3{
         font-family: 'Amazonica', sans-serif;
+}
+
+/* Estilização das legendas (parágrafos dentro da galeria) */
+.galeria-quadros-moldura-miriti p, 
+.galeria-processo-frabricacao p {
+    font-style: italic;     /* Texto em itálico */
+    text-align: center;    /* Centralizado */
+    margin-top: 15px;      /* Espaço entre imagem e texto */
+    font-size: 0.95rem;
+    color: #333;           /* Um cinza escuro para suavizar */
+    display: block;        /* Garante que ocupa a linha toda */
+    width: 100%;
 }
